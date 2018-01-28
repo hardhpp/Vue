@@ -1,0 +1,64 @@
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  cursor: pointer;
+  transform: translateX(-50%);
+}
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #000;
+  opacity: 0.2;
+  margin: 0 3px;
+}
+.carousel-indicator.active{
+  background: #fff;
+}
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  position: absolute;
+  z-index: 99;
+  top: 43%;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity .5s;
+  transform: scale(.95);
+  text-align: center;
+  cursor: pointer;
+}
+.carousel-btn.active {
+  opacity: 0.8;
+}
+.carousel-btn-next {
+  right: 10px;
+}
+.carousel-btn-prev {
+  left: 10px;
+}
+@font-face {
+  font-family: "klfont";
+  src: url('../assets/font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../assets/font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../assets/font/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  display: block;
+  font-family: "klfont" !important;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-btn_right:before {
+  content: "\e674";
+}
+.icon-btn_left:before {
+  content: "\e666";
+}
