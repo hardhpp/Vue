@@ -33,7 +33,7 @@
   </carousel>
   <br>
   <h1>loop = false</h1>
-  <carousel class="my-carousel" :loop="false" :timeDelta="10000">
+  <carousel class="my-carousel" :loop="false">
     <carousel-item class="slide1">Page1</carousel-item>
     <carousel-item class="slide2">Page2</carousel-item>
     <carousel-item class="slide3">Page3</carousel-item>
@@ -46,7 +46,7 @@
   </carousel>
   <br>
   <h1>noDragWhenSingle = false</h1>
-  <carousel class="my-carousel" :noDragWhenSingle="false" :speed="3000" >
+  <carousel class="my-carousel" :noDragWhenSingle="false">
     <carousel-item class="slide1">Single true</carousel-item>
   </carousel>
   <br>
