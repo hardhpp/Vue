@@ -247,7 +247,7 @@ export default {
         if (!this.loop && this.index === 1) {
           removeClass(this.$refs.arrowPrev, 'active')
         }
-        if (!this.loop && this.index < this.pages.length) {
+        if (this.index < this.pages.length) {
           addClass(this.$refs.arrowNext, 'active')
         }
       }
@@ -258,7 +258,7 @@ export default {
         if (!this.loop && this.index === this.pages.length - 2) {
           removeClass(this.$refs.arrowNext, 'active')
         }
-        if (!this.loop && this.index > -1) {
+        if (this.index > -1) {
           addClass(this.$refs.arrowPrev, 'active')
         }
       }
@@ -296,9 +296,16 @@ export default {
       var prevPage = this.$children[this.prevIndex(this.index)]
       var dragPage = this.$children[this.index]
       var nextPage = this.$children[this.nextIndex(this.index)]
+      if (prevPage === dragPage) {
+        prevPage = null
+      }
+      if (dragPage === nextPage) {
+        nextPage = null
+      }
       dragState.prevPage = prevPage ? prevPage.$el : null
       dragState.currentPage = dragPage ? dragPage.$el : null
       dragState.nextPage = nextPage ? nextPage.$el : null
+
       if (prevPage) {
         dragState.prevPage.style.display = 'block'
       }
