@@ -247,9 +247,6 @@ export default {
         if (!this.loop && this.index === 1) {
           removeClass(this.$refs.arrowPrev, 'active')
         }
-        if (this.index < this.pages.length) {
-          addClass(this.$refs.arrowNext, 'active')
-        }
       }
       this.doAnimate('prev')
     },
@@ -257,9 +254,6 @@ export default {
       if (this.pages.length > 1) {
         if (!this.loop && this.index === this.pages.length - 2) {
           removeClass(this.$refs.arrowNext, 'active')
-        }
-        if (this.index > -1) {
-          addClass(this.$refs.arrowPrev, 'active')
         }
       }
       this.doAnimate('next')
